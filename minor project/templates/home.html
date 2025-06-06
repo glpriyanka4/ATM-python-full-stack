@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Banking Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a597c7;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #503a2c;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 200px;
+      text-decoration: none;
+      color: black;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card-title {
+      padding: 15px;
+      font-size: 18px;
+      background-color: #09b7c4;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to Digital Bank</h1>
+
+  <div class="card-container">
+    <a href="/withdraw1" class="card">
+      <img src="{{url_for('static',filename='/images/withdraw.jpeg')}}" alt="Withdraw">
+      <div class="card-title">Withdraw</div>
+    </a>
+
+    <a href="/deposit1" class="card">
+      <img src="{{url_for('static',filename='/images/deposit.jpeg')}}" alt="Deposit">
+      <div class="card-title">Deposit</div>
+    </a>
+
+    <a href="/ministatement1" class="card">
+      <img src="{{url_for('static',filename='/images/mini statement.jpeg')}}" alt="Mini Statement">
+      <div class="card-title">Mini Statement</div>
+    </a>
+
+    <a href="/pingeneration1" class="card">
+      <img src="{{url_for('static',filename='/images/pin generation.jpeg')}}" alt="PIN Generation">
+      <div class="card-title">PIN Generation</div>
+    </a>
+  </div>
+</body>
+</html>
